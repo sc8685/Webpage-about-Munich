@@ -1,0 +1,345 @@
+/*
+  Name: Stipe Čulina
+  Course: ISTE240
+  Date: 09.05.2023.
+  Individual Project Final
+*/
+
+
+/*Body css*/
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #2b2b2b;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-size: 20px;
+  padding-top: 1rem;
+  
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+
+/*Main css*/
+main {
+  flex-grow: 1;
+}
+
+/*footer css*/
+footer {
+  margin-top: 30px;
+  background-color: #383737;
+  color: lightgray;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  margin-bottom: 1rem;
+}
+
+/*Changing paragraph color*/
+p {
+  color: #fffbf1;
+  padding-bottom: 40px;
+}
+
+
+/*keyframes for homepage header*/
+@keyframes typing {
+  from{
+    width: 0;
+  }to{
+    width:100%;
+  }
+
+
+}
+
+@keyframes blink-caret {
+  50%{
+    border-color: transparent;
+  }
+}
+
+/*Homepage header css*/
+.main{
+  text-align: center;
+  font-size: 80px;
+  color: #e79d67;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid;
+  width: 0;
+  max-width: 100%;
+  animation: typing 3s steps(500, end) forwards, blink-caret 0.5s step-end infinite;
+}
+
+/*Changing header color*/
+h1 {
+
+  color: #fffdd0;
+}
+
+/*Changing header color*/
+h2{
+   
+  color: #fffdd0;
+}
+
+/*css for three images*/
+.img1 {
+  float: left;
+  max-width: 100%;
+  height: auto;
+  border-radius: 30px;
+  border: #fffdd0 5px solid;
+  margin-bottom: 30px;
+
+}
+
+/*grow transition*/
+.grow .img1{
+  transition: 1s ease;
+  }
+  
+  .grow .img1:hover{
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 1s ease;
+  }
+
+.img2 {
+  float: right;
+  max-width: 100%;
+  height: auto;
+  border: #fffdd0 5px solid;
+  border-radius: 30px;
+
+}
+
+/*grow transition*/
+.grow .img2{
+  transition: 1s ease;
+  }
+  
+  .grow .img2:hover{
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 1s ease;
+  }
+
+  .img3 {
+    float: right;
+    max-width: 80%;
+    height: auto;
+    border-radius: 30px;
+    margin-left: 20px;
+    padding: 35px;
+    margin-top: -50px;
+    
+  
+  }
+
+/*Naigation bar css*/
+.navbar {
+  overflow: hidden;
+  background-color: #fffdd0;
+  border-radius: 5px;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: #2b2b2b;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+
+
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #2b2b2b;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  border-radius: 5px;
+
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: rgb(204, 176, 143);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #2b2b2b;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/*Fade in effect*/
+.img1, .img2, p, h1, h2, .img3{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease-in-out, transform 1s ease-in-out;
+  will-change: opacity, transform;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*back to top btn css*/
+#scrollBtn{
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  font-size: 18px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #fffdd0;
+  color: #2b2b2b;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#scrollBtn:hover{
+  background-color: rgba(204,176,143);
+}
+
+/* media queries*/
+
+/* Desktop */
+@media (min-width: 1200px) {
+  body{
+    
+    font-size: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  
+  .img1 {
+    float: right;
+    margin-left: 20px;
+  }
+
+  .img2 {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .img3 {
+    float: left;
+    margin-right: 20px;
+  }
+}
+
+/*Tablet*/
+@media (min-width: 768px) and (max-width: 1199px) {
+  body{
+    
+    font-size: 22px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  .img1 {
+    float: right;
+    margin-left: 10px;
+  }
+  .img2 {
+    float: left;
+    margin-right: 10px;
+  }
+
+  .img3 {
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+/*Mobile*/
+@media (max-width: 767px) {
+  body{
+    margin-left: 10%;
+    margin-right:10%;
+    font-size: 24px;
+  }
+
+  
+  .img1 {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+    display: block;
+  }
+
+  .img2 {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+    display: block;
+  }
+
+  .img3 {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+    display: block;
+  }
+
+  
+  
+  
+  
+}
